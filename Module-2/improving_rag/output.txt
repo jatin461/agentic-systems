@@ -1,0 +1,338 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 23258.19it/s]
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-small-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Loaded 1 document(s) from refunds_policy.txt
+Loaded 1 document(s) from returns_policy.txt
+Loaded 1 document(s) from shipping_policy.txt
+Loaded 1 document(s) from warranty_policy.txt
+Total loaded documents: 4
+Total chunks created: 4
+Indexed 4 chunks into shopkart_policy_kb_v2.
+PRINTING METADATA ----> [{'source': 'refunds_policy.txt', 'category': 'refunds', 'file_type': 'txt', 'chunk_index': 0}, {'source': 'returns_policy.txt', 'category': 'returns', 'file_type': 'txt', 'chunk_index': 0}, {'source': 'shipping_policy.txt', 'category': 'shipping', 'file_type': 'txt', 'chunk_index': 0}, {'source': 'warranty_policy.txt', 'category': 'warranty', 'file_type': 'txt', 'chunk_index': 0}]
+Knowledge base build complete.
+
+--- BASELINE (original prompt, no filter, top_k=3) ---
+
+========================================================================
+RUN: top_k=3 | filter=False | strict=False
+========================================================================
+
+========================================================================
+Customer question: Can I return a laptop charger if the box is opened?
+========================================================================
+
+Rank 1
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.6349
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Rank 2
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.7441
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Rank 3
+  Category : warranty
+  Source   : warranty_policy.txt
+  Distance : 0.7909
+  Text     : ShopKart Warranty Policy. Electronics carry a 12-month manufacturer warranty from delivery date for manufacturing defects under normal use. Warranty does not cover physical damage, liquid exposure, unauthorised repair, or misuse. Claims need invoice, serial number, and photos within the warranty period.
+
+Answer: No, you cannot return an opened laptop charger unless it's defective or damaged on arrival.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: Is UPI refund available for prepaid orders?
+========================================================================
+
+Rank 1
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.4793
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Rank 2
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.7680
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Rank 3
+  Category : warranty
+  Source   : warranty_policy.txt
+  Distance : 0.8550
+  Text     : ShopKart Warranty Policy. Electronics carry a 12-month manufacturer warranty from delivery date for manufacturing defects under normal use. Warranty does not cover physical damage, liquid exposure, unauthorised repair, or misuse. Claims need invoice, serial number, and photos within the warranty period.
+
+Answer: According to Excerpt 1 from refunds_policy.txt, "Cash-on-delivery orders are refunded to the original UPI or bank account only." Since the question mentions prepaid orders, we can infer that UPI refund is available for prepaid orders under this condition.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: I returned a defective kettle on COD last week. When will the refund reach my UPI?
+========================================================================
+
+Rank 1
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.5114
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Rank 2
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.6974
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Rank 3
+  Category : warranty
+  Source   : warranty_policy.txt
+  Distance : 0.8273
+  Text     : ShopKart Warranty Policy. Electronics carry a 12-month manufacturer warranty from delivery date for manufacturing defects under normal use. Warranty does not cover physical damage, liquid exposure, unauthorised repair, or misuse. Claims need invoice, serial number, and photos within the warranty period.
+
+Answer: According to Excerpt 1, ShopKart Refund Policy: Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Since your order was cash-on-delivery (COD), the refund will be credited to your original UPI. Please track the status of your refund in the ShopKart app under Orders.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: My earphones got water damage after 8 months. Is repair covered?
+========================================================================
+
+Rank 1
+  Category : warranty
+  Source   : warranty_policy.txt
+  Distance : 0.7068
+  Text     : ShopKart Warranty Policy. Electronics carry a 12-month manufacturer warranty from delivery date for manufacturing defects under normal use. Warranty does not cover physical damage, liquid exposure, unauthorised repair, or misuse. Claims need invoice, serial number, and photos within the warranty period.
+
+Rank 2
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.8849
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Rank 3
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.9449
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Answer: I do not have enough information in the provided policy excerpts.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: Will express shipping reach my non-metro pin code in 1 day?
+========================================================================
+
+Rank 1
+  Category : shipping
+  Source   : shipping_policy.txt
+  Distance : 0.4566
+  Text     : ShopKart Shipping Policy. Standard delivery takes 3 to 5 business days after dispatch on business days only. Express delivery is paid and arrives in 1 to 2 business days in metro cities only. Non-metro pin codes are not eligible for express timelines. Orders after 6 PM dispatch next business day. Customers receive tracking links once the courier picks up the package.
+
+Rank 2
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.6909
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Rank 3
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.7061
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Answer: I do not have enough information in the provided policy excerpts to confirm if express shipping will reach your non-metro pin code in 1 day.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: I ordered at 7 PM yesterday. When will standard shipping dispatch?
+========================================================================
+
+Rank 1
+  Category : shipping
+  Source   : shipping_policy.txt
+  Distance : 0.4442
+  Text     : ShopKart Shipping Policy. Standard delivery takes 3 to 5 business days after dispatch on business days only. Express delivery is paid and arrives in 1 to 2 business days in metro cities only. Non-metro pin codes are not eligible for express timelines. Orders after 6 PM dispatch next business day. Customers receive tracking links once the courier picks up the package.
+
+Rank 2
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.6939
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Rank 3
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.6953
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Answer: According to Excerpt 1, orders placed after 6 PM will be dispatched on the next business day. 
+
+Please note that standard delivery takes 3 to 5 business days after dispatch on business days only.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: When will I get my refund after return?
+========================================================================
+
+Rank 1
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.3838
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Rank 2
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.4928
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Rank 3
+  Category : warranty
+  Source   : warranty_policy.txt
+  Distance : 0.7157
+  Text     : ShopKart Warranty Policy. Electronics carry a 12-month manufacturer warranty from delivery date for manufacturing defects under normal use. Warranty does not cover physical damage, liquid exposure, unauthorised repair, or misuse. Claims need invoice, serial number, and photos within the warranty period.
+
+Answer: Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: When will my express order arrive in a metro city?
+========================================================================
+
+Rank 1
+  Category : shipping
+  Source   : shipping_policy.txt
+  Distance : 0.4822
+  Text     : ShopKart Shipping Policy. Standard delivery takes 3 to 5 business days after dispatch on business days only. Express delivery is paid and arrives in 1 to 2 business days in metro cities only. Non-metro pin codes are not eligible for express timelines. Orders after 6 PM dispatch next business day. Customers receive tracking links once the courier picks up the package.
+
+Rank 2
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.7814
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Rank 3
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.7826
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Answer: According to Excerpt 1, express delivery in metro cities usually arrives in 1 to 2 business days.
+------------------------------------------------------------------------
+
+--- IMPROVED (strict prompt + category filter + top_k=5) ---
+
+========================================================================
+RUN: top_k=5 | filter=True | strict=True
+========================================================================
+
+========================================================================
+Customer question: Can I return a laptop charger if the box is opened?
+========================================================================
+
+Rank 1
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.6349
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Answer: I do not have enough information in the provided policy excerpts to determine the eligibility of returning an opened laptop charger.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: Is UPI refund available for prepaid orders?
+========================================================================
+
+Rank 1
+  Category : refunds
+  Source   : refunds_policy.txt
+  Distance : 0.4793
+  Text     : ShopKart Refund Policy. Refunds are credited within 5 to 7 business days after the returned item passes warehouse verification. Cash-on-delivery orders are refunded to the original UPI or bank account only. Partial refunds may apply for missing packaging or accessories. Track status in the ShopKart app under Orders.
+
+Answer: I do not have enough information in the provided policy excerpts.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: I returned a defective kettle on COD last week. When will the refund reach my UPI?
+========================================================================
+
+Rank 1
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.6974
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Answer: I cannot provide a reason for a refund that is not mentioned in the excerpt.  However, I can tell you that since the kettle was defective, your return should be processed. If a refund is due, according to "Excerpt 1" it doesn't specify payment method.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: My earphones got water damage after 8 months. Is repair covered?
+========================================================================
+
+Rank 1
+  Category : warranty
+  Source   : warranty_policy.txt
+  Distance : 0.7068
+  Text     : ShopKart Warranty Policy. Electronics carry a 12-month manufacturer warranty from delivery date for manufacturing defects under normal use. Warranty does not cover physical damage, liquid exposure, unauthorised repair, or misuse. Claims need invoice, serial number, and photos within the warranty period.
+
+Answer: I'm sorry, repair is not covered due to physical damage and liquid exposure.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: Will express shipping reach my non-metro pin code in 1 day?
+========================================================================
+
+Rank 1
+  Category : shipping
+  Source   : shipping_policy.txt
+  Distance : 0.4566
+  Text     : ShopKart Shipping Policy. Standard delivery takes 3 to 5 business days after dispatch on business days only. Express delivery is paid and arrives in 1 to 2 business days in metro cities only. Non-metro pin codes are not eligible for express timelines. Orders after 6 PM dispatch next business day. Customers receive tracking links once the courier picks up the package.
+
+Answer: According to our shipping policy, non-metro pin codes are not eligible for express timelines.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: I ordered at 7 PM yesterday. When will standard shipping dispatch?
+========================================================================
+
+Rank 1
+  Category : shipping
+  Source   : shipping_policy.txt
+  Distance : 0.4442
+  Text     : ShopKart Shipping Policy. Standard delivery takes 3 to 5 business days after dispatch on business days only. Express delivery is paid and arrives in 1 to 2 business days in metro cities only. Non-metro pin codes are not eligible for express timelines. Orders after 6 PM dispatch next business day. Customers receive tracking links once the courier picks up the package.
+
+Answer: Orders after 6 PM are dispatched next business day.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: When will I get my refund after return?
+========================================================================
+
+Rank 1
+  Category : returns
+  Source   : returns_policy.txt
+  Distance : 0.4928
+  Text     : ShopKart Returns Policy. Unopened items in original packaging may be returned within 7 calendar days of delivery. Return requests must be raised on the app before the window closes. Opened or used items are not eligible unless defective or damaged on arrival. Defect claims need photos within 48 hours of delivery. Electronics must pass warehouse quality check. Personal care and opened software keys cannot be returned unless defective.
+
+Answer: According to our returns policy, I do not have enough information in the provided policy excerpts about the timing of refunds after returning an item.
+------------------------------------------------------------------------
+
+========================================================================
+Customer question: When will my express order arrive in a metro city?
+========================================================================
+
+Rank 1
+  Category : shipping
+  Source   : shipping_policy.txt
+  Distance : 0.4822
+  Text     : ShopKart Shipping Policy. Standard delivery takes 3 to 5 business days after dispatch on business days only. Express delivery is paid and arrives in 1 to 2 business days in metro cities only. Non-metro pin codes are not eligible for express timelines. Orders after 6 PM dispatch next business day. Customers receive tracking links once the courier picks up the package.
+
+Answer: Your express order will arrive in 1 to 2 business days in a metro city. 
+
+However, I notice that the original question was for "When will my express order arrive?"  Since you said my, I have added to my response,  in a metro city, as a courtesy.
+------------------------------------------------------------------------
