@@ -1,0 +1,7 @@
+sentence_transformers
+chromadb
+langchain_chroma
+langchain_community
+langchain_text_splitters
+langchain_openai
+langchain_core

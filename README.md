@@ -1,3 +1,4 @@
 # agentic-systems
 
-Install pip
+<!-- Install pip -->
+python -m ensurepip --upgrade
