@@ -1,3 +1,80 @@
 PPTs of whole course -> https://drive.google.com/drive/folders/1UQ7eQHzNrXBBiRh04P0bFuhRp09OGKY9
 Python Fundamentals (session1) -> https://github.com/saksham20189575/iitr-ai/tree/main/session1
 
+Consolidated PPTs:
+Revision Module 1 ->https://docs.google.com/presentation/d/1p74VdJOENeuoZEv79J6BVnTk2GHws262/edit?slide=id.p1#slide=id.p1
+
+Master Project Building with AI Tools:
+https://drive.google.com/file/d/1gEUtG7yRsFhtA1zsqooTulcuS0L7fyL4/view
+
+Connect with Program Coordinator:
+https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3HhFVDt5Q76PYsTo7WrDVPKbwAc-mn8kZSn3zfGuvKGqbbrfAoXcUTii8vtq7yTxhXSNqdwCcC
+
+Online whitboard -> https://excalidraw.com/
+python doubt -> Pratap Solanki -> solanki99p@gmail.com
+
+====================Worshops=======================
+AI Job Agent Workshop -> https://masai-live.masaischool.com/cd/afnCL0_Po9vgQKvc
+
+===================================================
+
+--------------------------------Module 2-----------------------------
+SQL -> https://docs.google.com/document/d/1hkibjifJHTM-_h84zhChOrfxS0ePZyNMuKYyJHCx0MU/edit?tab=t.0
+
+---------------------------------------------------------------------------
+
+Design Pattern -> https://www.oodesign.com/
+
+----------------------------------------------------------------------------
+
+Claude Course Videos -> https://topmate.io/sakshamarora/2051297
+Ship Real Products with AI Coding Tools -> https://topmate.io/sakshamarora/2079387
+
+Software Installation (VSCode, ChromaDB, SQLite)
+https://drive.google.com/file/d/1r-dCQTQfQBNMdKfn8J8p0vhABABTAwjU/view
+MAC and Windows SetUp -> https://drive.google.com/drive/folders/1Sos196PjvCPilcQbs0eBFTU0LMowdAN-
+
+Kubernetes/Github Action basics
+1. https://github.com/LondheShubham153/github-actions-skillpulse-d/tree/main
+2. https://github.com/LondheShubham153/github-actions-kubernetes-masterclass/tree/main
+
+ArgoCD
+1. https://github.com/LondheShubham153/argocd-demos
+2. https://github.com/LondheShubham153/argocd-in-one-shot
+
+Logging Freeware
+https://firebase.google.com/docs/functions/writing-and-viewing-logs
+
+--------------------------------------------------------------------------------
+RAG Projects By Saksham
+https://github.com/saksham20189575/rag-demo-1
+https://github.com/saksham20189575/milestone2
+
+--------------------------------------------------------------------------------
+MCP Projects by Saksham
+https://www.youtube.com/watch?v=_0Buq1hvHTo
+MCP Server List - https://mcpservers.org/
+
+-------------------------------------------------------------------------------
+Job Scrapper
+https://www.youtube.com/watch?v=JwshauQFM54&list=PL0yP9t93Zw_DIMaYcCWsT3I53Y7HYo1cE
+
+------------------------------------------------------------------------------------
+Claude Skill Set tutorial
+https://www.youtube.com/watch?v=1ObpGxEaNEk&list=PL0yP9t93Zw_AyNcDz98-Tbi418nlGeoDz
+
+--------------------------------------------------------------------------------
+Groq
+APi Key -> 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
+OpenRouterAI 
+APIKey -> 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
+OLLAMA Cloud API Key -> f390b6d378b14a2da0737a1c218238ff.KSsjKYYvNhFXCQIszzrp1XFo
+
+------------------------------------------------------------------------------------
+Github
+jatinarora461@gmail.com/HubGit@978
+
+====================
+- Cursorai editor
+- kiro ai editor
+- anti-gravity
