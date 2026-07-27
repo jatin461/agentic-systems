@@ -70,6 +70,24 @@ OpenRouterAI
 APIKey -> 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
 OLLAMA Cloud API Key -> f390b6d378b14a2da0737a1c218238ff.KSsjKYYvNhFXCQIszzrp1XFo
 
+------- Deployment ------------
+
+https://docs.google.com/document/d/1EFTFo0k8mON3rP7wjReuP8cIHZhqoLSkj-NFptXEMRc/edit?pli=1&tab=t.0
+
+------------------------------------------------------------------------------------
+
+-------- Restaurant Zomato Agent ---------
+
+https://docs.google.com/document/d/1VSpx9qdjIibgFclTjYUU5bKMScbPXW6DKzSikz-gd-Q/edit?tab=t.0#heading=h.5r1nxh6yyned
+
+------------------------------------------------------------
+
+------------------------ Mutual Funds Agent ------------------------
+
+https://docs.google.com/document/d/1Hf8JkI4Z5l06tms8DXZv8y1g9C725pwi4w4C93DuROo/edit?tab=t.0
+
+---------------------------------------------------------------
+
 ------------------------------------------------------------------------------------
 Github
 jatinarora461@gmail.com/HubGit@978
