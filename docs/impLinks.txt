@@ -64,11 +64,7 @@ Claude Skill Set tutorial
 https://www.youtube.com/watch?v=1ObpGxEaNEk&list=PL0yP9t93Zw_AyNcDz98-Tbi418nlGeoDz
 
 --------------------------------------------------------------------------------
-Groq
-APi Key -> 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
-OpenRouterAI 
-APIKey -> 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
-OLLAMA Cloud API Key -> f390b6d378b14a2da0737a1c218238ff.KSsjKYYvNhFXCQIszzrp1XFo
+
 
 ------------------------------------------------------------------------------------
 Github
