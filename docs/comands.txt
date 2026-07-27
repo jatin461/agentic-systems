@@ -1,0 +1,2 @@
+Write Program Outbut console into file -> python3 code.py > output.txt 2>&1; echo "EXIT_CODE=$?"
+

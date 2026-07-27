@@ -1,0 +1,166 @@
+PPTs of whole course -> https://drive.google.com/drive/folders/1UQ7eQHzNrXBBiRh04P0bFuhRp09OGKY9
+Python Fundamentals (session1) -> https://github.com/saksham20189575/iitr-ai/tree/main/session1
+
+Consolidated PPTs:
+Revision Module 1 ->https://docs.google.com/presentation/d/1p74VdJOENeuoZEv79J6BVnTk2GHws262/edit?slide=id.p1#slide=id.p1
+
+Master Project Building with AI Tools:
+https://drive.google.com/file/d/1gEUtG7yRsFhtA1zsqooTulcuS0L7fyL4/view
+
+Connect with Program Coordinator:
+https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3HhFVDt5Q76PYsTo7WrDVPKbwAc-mn8kZSn3zfGuvKGqbbrfAoXcUTii8vtq7yTxhXSNqdwCcC
+
+Online whitboard -> https://excalidraw.com/
+python doubt -> Pratap Solanki -> solanki99p@gmail.com
+
+====================Worshops=======================
+AI Job Agent Workshop -> https://masai-live.masaischool.com/cd/afnCL0_Po9vgQKvc
+
+===================================================
+
+--------------------------------Module 2-----------------------------
+SQL -> https://docs.google.com/document/d/1hkibjifJHTM-_h84zhChOrfxS0ePZyNMuKYyJHCx0MU/edit?tab=t.0
+
+---------------------------------------------------------------------------
+
+Design Pattern -> https://www.oodesign.com/
+
+----------------------------------------------------------------------------
+
+Claude Course Videos -> https://topmate.io/sakshamarora/2051297
+Ship Real Products with AI Coding Tools -> https://topmate.io/sakshamarora/2079387
+
+Software Installation (VSCode, ChromaDB, SQLite)
+https://drive.google.com/file/d/1r-dCQTQfQBNMdKfn8J8p0vhABABTAwjU/view
+MAC and Windows SetUp -> https://drive.google.com/drive/folders/1Sos196PjvCPilcQbs0eBFTU0LMowdAN-
+
+Kubernetes/Github Action basics
+1. https://github.com/LondheShubham153/github-actions-skillpulse-d/tree/main
+2. https://github.com/LondheShubham153/github-actions-kubernetes-masterclass/tree/main
+
+ArgoCD
+1. https://github.com/LondheShubham153/argocd-demos
+2. https://github.com/LondheShubham153/argocd-in-one-shot
+
+Logging Freeware
+https://firebase.google.com/docs/functions/writing-and-viewing-logs
+
+--------------------------------------------------------------------------------
+RAG Projects By Saksham
+https://github.com/saksham20189575/rag-demo-1
+https://github.com/saksham20189575/milestone2
+
+--------------------------------------------------------------------------------
+MCP Projects by Saksham
+https://www.youtube.com/watch?v=_0Buq1hvHTo
+MCP Server List - https://mcpservers.org/
+
+-------------------------------------------------------------------------------
+Job Scrapper
+https://www.youtube.com/watch?v=JwshauQFM54&list=PL0yP9t93Zw_DIMaYcCWsT3I53Y7HYo1cE
+
+------------------------------------------------------------------------------------
+Claude Skill Set tutorial
+https://www.youtube.com/watch?v=1ObpGxEaNEk&list=PL0yP9t93Zw_AyNcDz98-Tbi418nlGeoDz
+
+--------------------------------------------------------------------------------
+Groq
+APi Key -> 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
+OpenRouterAI 
+APIKey -> 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
+OLLAMA Cloud API Key -> f390b6d378b14a2da0737a1c218238ff.KSsjKYYvNhFXCQIszzrp1XFo
+
+------------------------------------------------------------------------------------
+Github
+jatinarora461@gmail.com/HubGit@978
+
+====================
+- Cursorai editor
+- kiro ai editor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In my existing project folder (which has engine.py, triage.py, context_builder.py, draft_machine.py, approval_gate.py, tone_profile.json, past_replies.json, .env), create:
+ 
+1. sample_threads.json — 5 realistic email threads for demo, each with: id, subject, messages array [{from, date, body}]. Make them varied:
+   - Thread 1: Urgent production API issue from engineering lead
+   - Thread 2: VP asking for feedback on Q3 roadmap (needs reply)
+   - Thread 3: Weekly standup notes from team (FYI only)
+   - Thread 4: Vendor contract renewal follow-up (needs reply)
+   - Thread 5: Meeting request for AI feature review (needs reply)
+ 
+2. app.py — A Streamlit app called 'The Draft Desk' with:
+   - Page config: title='The Draft Desk', icon='✍️', layout='wide'
+   - Sidebar: title, source selector radio (Sample threads / Gmail via engine.py), 4 navigation buttons (Inbox & Triage, Draft Generation, Approval Gate, Export Proof)
+   - Session state: threads, triaged (dict by priority), drafts (dict), approved (dict), rejected (set), current_phase
+   - For now just show the Inbox phase with a 'Pull & Triage' button that loads sample_threads.json and displays them in a list
+ 
+No pip installs needed — everything is already installed.
+
+------------------------
+TRAIGE FUNCTIONALITY ---->
+Update app.py to add real triage functionality:
+
+1. When 'Pull & Triage' is clicked:
+   - If source is 'Sample': load sample_threads.json
+   - If source is 'Gmail': call fetch_threads() from engine.py and convert the result to our thread format [{id, subject, messages: [{from, date, body}]}]
+   - Then call triage_inbox() from triage.py on each thread to classify priority
+   - Group threads by priority (urgent, needs-reply, fyi, ignore)
+   - Store in st.session_state.triaged
+
+2. Display triaged threads:
+   - Group by priority with emoji headers (🚨 Urgent, 💬 Needs Reply, 📋 FYI, 🗑️ Ignore)
+   - Each thread in an st.expander showing full message history
+   - At the bottom show: 'X threads need a reply → go to Draft Generation'
+
+triage.py is already in the folder from Sprint 1 — just import triage_inbox from it.
+
+
+---------------------------------------------------
+DRAFT GENERATION FUNCTIONALITY PROMPT =============>
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------
+Export Proof for Draft Phase Prompt ===================>
+
+Update app.py to add the Approval Gate and Export Proof phases:  APPROVAL GATE: 1. Loop through drafts that haven't been approved/rejected yet 2. For each: show thread
+ subject, two columns (left=full thread, right=editable text_area with draft) 3. Three buttons: Approve (saves edited text to st.session_state.approved), Regenerate 
+(calls draft_reply again), Reject (adds to rejected set) 4. Show running count: X approved, Y rejected 5. When all reviewed: st.balloons() + 'Go to Export Proof' 
+ EXPORT PROOF: 1. Show preview of all approved drafts side-by-side 2. generate_proof_markdown() function: creates markdown with title, date, for each approved thread 
+shows original messages quoted + draft in code block 3. generate_proof_html() function: styled dark-theme HTML with CSS grid (original left with orange border, draft 
+right with green border) 4. Two download buttons: Download Proof (Markdown), Download Proof (HTML) 5. Note: 'Share with #MyAIChiefOfStaff to earn your Ghostwriter 
+badge!'  This reuses the same approve/edit/reject pattern from Thursday's approval_gate.py.
