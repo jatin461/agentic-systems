@@ -4,6 +4,9 @@ Python Fundamentals (session1) -> https://github.com/saksham20189575/iitr-ai/tre
 Consolidated PPTs:
 Revision Module 1 ->https://docs.google.com/presentation/d/1p74VdJOENeuoZEv79J6BVnTk2GHws262/edit?slide=id.p1#slide=id.p1
 
+Kopal's PPT Link:
+https://drive.google.com/drive/folders/1Sos196PjvCPilcQbs0eBFTU0LMowdAN-
+
 Master Project Building with AI Tools:
 https://drive.google.com/file/d/1gEUtG7yRsFhtA1zsqooTulcuS0L7fyL4/view
 
